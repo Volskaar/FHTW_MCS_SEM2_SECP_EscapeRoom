@@ -5,3 +5,41 @@ services:
     ports:
       - "8080:5000"
     restart: unless-stopped
+
+  server:
+    image: alpine:latest
+    container_name: fintech-backup-server
+    expose:
+      - "22"
+    networks:
+      - backend
+    # installiert auf latest Alpine openssh für eine verbindung und setzt direkt das root PW
+    # frisch gekocht vom Zwilling XD
+    command: >
+      sh -c "apk add --no-cache openssh 
+      && ssh-keygen -A 
+      && echo 'root:pqu3ihrfai8dfz3?1sd' | chpasswd 
+      && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config 
+      && /usr/sbin/sshd -D -e"
+
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    container_name: fintech-webtop
+    networks:
+      - backend
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin #Zeitzone
+      - TITLE=ClientTop #Browser Title
+      - CUSTOM_USER=hans.habicht
+      - PASSWORD=Remington
+      - LC_ALL=de_DE.UTF-8 #Sprache einstellen
+      - DOCKER_MODS=linuxserver/mods:universal-package-install
+      - INSTALL_PACKAGES=libfuse2|iputils-ping|vim|nmap #Programme die per default installiert werden
+    ports:
+      - "3000:3000"
+    shm_size: "1gb"
+
+networks:
+  backend:
