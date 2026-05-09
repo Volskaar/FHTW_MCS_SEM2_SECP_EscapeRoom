@@ -1,20 +1,20 @@
 services:
-  fintech-hr-powertool:
+  powertool:
     build: .
-    container_name: fintech-hr-powertool
-    ports:
-      - "8080:5000"
+    expose:
+      - "5000"
     restart: unless-stopped
+    networks:
+      backend:
+        ipv4_address: 172.10.10.24
 
   server:
     image: alpine:latest
-    container_name: fintech-backup-server
     expose:
       - "22"
     networks:
-      - backend
-    # installiert auf latest Alpine openssh für eine verbindung und setzt direkt das root PW
-    # frisch gekocht vom Zwilling XD
+      backend:
+        ipv4_address: 172.10.10.25
     command: >
       sh -c "apk add --no-cache openssh 
       && ssh-keygen -A 
@@ -24,22 +24,24 @@ services:
 
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate
-    container_name: fintech-webtop
     networks:
       - backend
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin #Zeitzone
-      - TITLE=ClientTop #Browser Title
+      - TZ=Europe/Berlin
+      - TITLE=ClientTop
       - CUSTOM_USER=hans.habicht
       - PASSWORD=Remington
-      - LC_ALL=de_DE.UTF-8 #Sprache einstellen
+      - LC_ALL=de_DE.UTF-8
       - DOCKER_MODS=linuxserver/mods:universal-package-install
-      - INSTALL_PACKAGES=libfuse2|iputils-ping|vim|nmap #Programme die per default installiert werden
+      - INSTALL_PACKAGES=libfuse2|iputils-ping|vim|nmap
     ports:
       - "3000:3000"
     shm_size: "1gb"
 
 networks:
   backend:
+    ipam:
+      config:
+        - subnet: 172.10.10.0/24
