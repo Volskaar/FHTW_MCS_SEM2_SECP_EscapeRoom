@@ -39,6 +39,8 @@ services:
     ports:
       - "3000:3000"
     shm_size: "1gb"
+    volumes:
+      - ./config:/custom
 
 networks:
   backend:
