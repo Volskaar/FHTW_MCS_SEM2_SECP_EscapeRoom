@@ -1,0 +1,7 @@
+services:
+  fintech-hr-powertool:
+    build: .
+    container_name: fintech-hr-powertool
+    ports:
+      - "8080:5000"
+    restart: unless-stopped
