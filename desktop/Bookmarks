@@ -1,0 +1,69 @@
+{
+   "checksum": "2a47890400ee529f418f4acad28646d5",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13423243714464837",
+            "date_last_used": "13423243739525326",
+            "guid": "58682ad1-f241-4d4b-9be5-b9d7e642d332",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "FinTech HR Powertool",
+            "type": "url",
+            "url": "http://172.10.10.24:5000/"
+         }, {
+            "date_added": "13423243733818352",
+            "date_last_used": "0",
+            "guid": "8d12bdac-ab22-4380-b19d-5f84ac11ad28",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Base64 Decode and Encode - Online",
+            "type": "url",
+            "url": "https://www.base64decode.org/"
+         }, {
+            "date_added": "13423243833313996",
+            "date_last_used": "0",
+            "guid": "dfe21bff-21a6-4efe-88bf-de3df0d8a7ed",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Search for people | LinkedIn",
+            "type": "url",
+            "url": "https://www.linkedin.com/pub/dir/+/+?trk=guest_homepage-basic_guest_nav_menu_people"
+         } ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "13423243833313996",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "13423243714464837",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
