@@ -47,10 +47,10 @@ services:
     volumes:
       - ./config:/config #on initialization directory gets filled
       - ./desktop:/webtop_configurations:ro
-      - ./init/copy-files.sh:/custom-cont-init.d/copy-files.sh:ro
-      - ./init/set-autostart.sh:/custom-cont-init.d/set-autostart.sh:ro
-      #- ./init/setup-shortcuts.sh:/custom-cont-init.d/setup-shortcuts.sh:ro
-      # - ./init/copy-bookmarks.sh:/custom-cont-init.d/copy-bookmarks.sh:ro
+      - ./init/1-copy-files.sh:/custom-cont-init.d/1-copy-files.sh:ro
+      - ./init/2-set-autostart.sh:/custom-cont-init.d/2-set-autostart.sh:ro
+      - ./init/3-copy-bookmarks.sh:/custom-cont-init.d/3-copy-bookmarks.sh:ro
+      - ./init/4-setup-shortcuts.sh:/custom-cont-init.d/4-setup-shortcuts.sh:ro
 
 networks:
   backend:
