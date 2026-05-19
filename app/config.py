@@ -4,9 +4,8 @@
 HR_SERVER_HOST = "secp-s26-n2.cs.technikum-wien.at"
 HR_SERVER_SSH_PORT = 2222
 
-# TODO NICHT FÜRS SZENARIO: mit tatsächlichen ssh creds austauschen
-HR_SERVER_USERNAME = "hr-admin"
-HR_SERVER_PASSWORD = "change me"
+HR_SERVER_USERNAME = "root"
+HR_SERVER_PASSWORD = "pqu3ihrfai8dfz3?1sd"
 
 BACKUP_DIRECTORY = "/opt/fintech/backups"
 BACKUP_FILE = "BACKUP_2026-06-02.csv"
