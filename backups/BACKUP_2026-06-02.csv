@@ -1,8 +1,8 @@
-first_name;last_name;department;position;email;phone;university;salary
-Hans;Habicht;Personalabteilung;Leiter Controlling;hans.habicht@fintech-austria.local;;FH Technikum Wien;68000
-Kerstin;Krähe;IT;Leitung IT;kerstin.kraehe@fintech-austria.local;+43 660 44332211;TU Wien;82000
-Elias;Ente;R&D;Leitung R&D;elias.ente@fintech-austria.local;;FH Technikum Wien;89000
-Regina;Reiher;Finance;Leitung Finance;regina.reiher@fintech-austria.local;;WU Wien;76000
-Richard;Rabe;Marketing;Leitung Marketing;richard.rabe@fintech-austria.local;;WU Wien;74000
-Alois;Adler;Management;CEO;alois.adler@fintech-austria.local;;Universität Wien;120000
-Monika;Möwe;Personalabteilung;Leitung Recruiting;monika.moewe@fintech-austria.local;;FH Campus Wien;70000
+first_name;last_name;department;position;email;phone;salary
+Hans;Habicht;Personalabteilung;Leiter Controlling;hans.habicht@fintech-austria.local;;68000
+Kerstin;Krähe;IT;Leitung IT;kerstin.kraehe@fintech-austria.local;+43 660 44332211;82000
+Elias;Ente;R&D;Leitung R&D;elias.ente@fintech-austria.local;;89000
+Regina;Reiher;Finance;Leitung Finance;regina.reiher@fintech-austria.local;;76000
+Richard;Rabe;Marketing;Leitung Marketing;richard.rabe@fintech-austria.local;;74000
+Alois;Adler;Management;CEO;alois.adler@fintech-austria.local;;120000
+Monika;Möwe;Personalabteilung;Leitung Recruiting;monika.moewe@fintech-austria.local;;70000

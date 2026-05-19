@@ -18,7 +18,6 @@ def create_backup():
                 position,
                 email,
                 phone,
-                university,
                 salary
             FROM employees
         """).fetchall()
@@ -33,7 +32,6 @@ def create_backup():
             "position",
             "email",
             "phone",
-            "university",
             "salary"
         ])
 
@@ -45,7 +43,6 @@ def create_backup():
                 employee["position"],
                 employee["email"],
                 employee["phone"],
-                employee["university"],
                 employee["salary"]
             ])
 
