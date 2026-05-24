@@ -14,3 +14,7 @@ elif [ -f "/usr/share/applications/chromium-browser.desktop" ]; then
     ln -s /usr/share/applications/chromium-browser.desktop "$DESKTOP_DIR/"
     echo "Chrome shortcut set."
 fi
+if [ -f "/usr/share/applications/mate-terminal.desktop" ]; then
+    ln -s /usr/share/applications/mate-terminal.desktop "$DESKTOP_DIR/"
+    echo "Terminal shortcut set."
+fi
