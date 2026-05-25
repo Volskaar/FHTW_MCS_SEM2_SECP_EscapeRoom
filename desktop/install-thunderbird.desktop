@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Install thunderbird
+Exec=/config/.custom-config/install-thunderbird.sh
+X-GNOME-Autostart-enabled=true
