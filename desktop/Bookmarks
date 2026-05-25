@@ -1,5 +1,5 @@
 {
-   "checksum": "2a47890400ee529f418f4acad28646d5",
+   "checksum": "0b1de15b93747cc250ddb822087cb02a",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -35,10 +35,21 @@
             "name": "Search for people | LinkedIn",
             "type": "url",
             "url": "https://www.linkedin.com/pub/dir/+/+?trk=guest_homepage-basic_guest_nav_menu_people"
+         }, {
+            "date_added": "13424201002945071",
+            "date_last_used": "0",
+            "guid": "b27b90f2-0b5a-47ed-96e9-22266be96a61",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "GitHub - eliasentefintech/fintech-hr-powertool: Internal HR platform prototype for FinTech Austria GmbH. Used for testing and development. · GitHub",
+            "type": "url",
+            "url": "https://github.com/eliasentefintech/fintech-hr-powertool"
          } ],
          "date_added": "13423243677773441",
          "date_last_used": "0",
-         "date_modified": "13423243833313996",
+         "date_modified": "13424201002945071",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",
