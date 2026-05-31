@@ -1,6 +1,10 @@
 from db import get_connection, DB_PATH
+import os
 
 def create_tables():
+    if DB_PATH.exists():
+        os.remove(DB_PATH)
+
     DB_PATH.parent.mkdir(exist_ok=True)
 
     with get_connection() as connection:
@@ -36,7 +40,7 @@ def seed_data():
             INSERT INTO users (username, password, role)
             VALUES (?, ?, ?)
         """, [
-            ("hans.habicht", "MeinSicheresPasswort1220!", "user"),
+            ("hans.habicht", "MeinSicheresPasswort123!", "user"),
             ("admin", "FinTechAdmin2026!", "admin"),
         ])
 

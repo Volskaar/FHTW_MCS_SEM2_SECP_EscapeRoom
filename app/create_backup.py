@@ -1,12 +1,16 @@
 import csv
 from pathlib import Path
 from db import get_connection
+import shutil
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 BACKUP_DIR = BASE_DIR / "backups"
 BACKUP_FILE = BACKUP_DIR / "BACKUP_2026-06-02.csv"
 
 def create_backup():
+    if BACKUP_DIR.exists():
+        shutil.rmtree(BACKUP_DIR)
+
     BACKUP_DIR.mkdir(exist_ok=True)
 
     with get_connection() as connection:
