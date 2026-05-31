@@ -41,7 +41,7 @@ services:
       - PASSWORD=Remington
       - LC_ALL=de_DE.UTF-8
       - DOCKER_MODS=linuxserver/mods:universal-package-install
-      - INSTALL_PACKAGES=libfuse2|iputils-ping|vim|nmap
+      - INSTALL_PACKAGES=jq|libfuse2|iputils-ping|vim|nmap
     ports:
       - "3000:3000"
       - "3001:3001" ## https mit selfsigned Cert
