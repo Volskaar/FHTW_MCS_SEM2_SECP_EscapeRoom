@@ -22,6 +22,7 @@ def create_tables():
                 position TEXT NOT NULL,
                 email TEXT NOT NULL,
                 phone TEXT,
+                university TEXT,
                 salary INTEGER
             )
         """)
@@ -42,17 +43,17 @@ def seed_data():
         connection.executemany("""
             INSERT INTO employees (
                 first_name, last_name, department, position,
-                email, phone, salary
+                email, phone, university, salary
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, [
-            ("Hans", "Habicht", "Personalabteilung", "Leiter Controlling", "hans.habicht@fintech-austria.local", None, 68000),
-            ("Kerstin", "Krähe", "IT", "Leitung IT", "kerstin.kraehe@fintech-austria.local", "+43 660 44332211", 82000),
-            ("Elias", "Ente", "R&D", "Leitung R&D", "elias.ente@fintech-austria.local", None, 89000),
-            ("Regina", "Reiher", "Finance", "Leitung Finance", "regina.reiher@fintech-austria.local", None, 76000),
-            ("Richard", "Rabe", "Marketing", "Leitung Marketing", "richard.rabe@fintech-austria.local", None, 74000),
-            ("Alois", "Adler", "Management", "CEO", "alois.adler@fintech-austria.local", None, 120000),
-            ("Monika", "Möwe", "Personalabteilung", "Leitung Recruiting", "monika.moewe@fintech-austria.local", None, 70000),
+            ("Hans", "Habicht", "Personalabteilung", "Leiter Controlling", "hans.habicht@fintech-austria.local", None, "FH Technikum Wien", 68000),
+            ("Kerstin", "Krähe", "IT", "Leitung IT", "kerstin.kraehe@fintech-austria.local", "+43 660 44332211", "TU Wien", 82000),
+            ("Elias", "Ente", "R&D", "Leitung R&D", "elias.ente@fintech-austria.local", None, "FH Technikum Wien", 89000),
+            ("Regina", "Reiher", "Finance", "Leitung Finance", "regina.reiher@fintech-austria.local", None, "WU Wien", 76000),
+            ("Richard", "Rabe", "Marketing", "Leitung Marketing", "richard.rabe@fintech-austria.local", None, "WU Wien", 74000),
+            ("Alois", "Adler", "Management", "CEO", "alois.adler@fintech-austria.local", None, "Universität Wien", 120000),
+            ("Monika", "Möwe", "Personalabteilung", "Leitung Recruiting", "monika.moewe@fintech-austria.local", None, "FH Campus Wien", 70000),
         ])
 
 if __name__ == "__main__":
