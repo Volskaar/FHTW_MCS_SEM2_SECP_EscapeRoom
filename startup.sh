@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Clear previous run artifacts
+docker compose down
 docker system prune -f; 
 sudo rm -r config/;
 
@@ -10,4 +11,4 @@ python3 -u ./app/create_backup.py
 mkdir config;
 
 docker compose build --no-cache;
-docker compose up
+docker compose up -d
