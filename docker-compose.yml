@@ -24,6 +24,23 @@ services:
       && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config 
       && /usr/sbin/sshd -D -e"
 
+  webmail:
+    build:
+      context: ./webmail-app
+      dockerfile: Dockerfile
+    image: fintech-webmail
+    container_name: fintech-webmail
+    expose:
+      - "5001"
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+    networks:
+      backend:
+        ipv4_address: 172.10.10.26
+    volumes:
+      - ./desktop/email:/opt/webmail/email:ro
+
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate
     networks:

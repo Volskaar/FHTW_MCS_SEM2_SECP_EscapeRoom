@@ -13,6 +13,7 @@ cd <repo>
 ./startup.sh
 
 # access http://localhost:3000/  or https://localhost:3001/ to see webtop interface
+# access http://localhost:5001/ to see the read-only webmail viewer
 
 Cleanup
 rm -r config/
