@@ -2,16 +2,25 @@ from __future__ import annotations
 
 import os
 import re
+import sqlite3
 from html import unescape
 from email import policy
 from email.parser import BytesParser
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from flask import Flask, abort, render_template, request, url_for
+from flask import Flask, abort, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("WEBMAIL_SECRET_KEY", "super-secret-key")
 MAIL_SOURCE_DIR = Path(os.environ.get("MAIL_SOURCE_DIR", "/opt/webmail/email")).resolve()
+DB_PATH = Path(os.environ.get("WEBMAIL_DB_PATH", "/opt/webmail/data/hr.sqlite")).resolve()
+
+
+def get_connection():
+    connection = sqlite3.connect(DB_PATH)
+    connection.row_factory = sqlite3.Row
+    return connection
 
 def _safe_relative_path(relative_path: str) -> Path:
     candidate = (MAIL_SOURCE_DIR / relative_path).resolve()
@@ -121,12 +130,37 @@ def _collect_mails() -> list[dict]:
     mails.sort(key=lambda item: item["date_raw"] or "", reverse=True)
     return mails
 
-@app.route("/")
-def home():
-    return inbox()
+
+@app.route("/", methods=["GET", "POST"])
+def login():
+    if session.get("user"):
+        return redirect("/inbox")
+
+    error = ""
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+
+        with get_connection() as conn:
+            user = conn.execute(
+                "SELECT * FROM users WHERE username = ? AND password = ?",
+                (username, password),
+            ).fetchone()
+
+        if user:
+            session["user"] = user["username"]
+            session["role"] = user["role"]
+            return redirect("/inbox")
+
+        error = "Login failed"
+
+    return render_template("login.html", error=error)
 
 @app.route("/inbox")
 def inbox():
+    if "user" not in session:
+        return redirect("/")
+
     mails = _collect_mails()
 
     selected_mail = mails[0] if mails else None
@@ -146,6 +180,9 @@ def inbox():
 
 @app.route("/mail/<path:relative_path>")
 def mail_detail(relative_path: str):
+    if "user" not in session:
+        return redirect("/")
+
     file_path = _safe_relative_path(relative_path)
     selected_mail = _parse_eml(file_path)
 
@@ -157,6 +194,12 @@ def mail_detail(relative_path: str):
         selected_mail=selected_mail,
         selected_path=selected_mail["relative_path"],
     )
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
 
 @app.context_processor
 def utility_processor():

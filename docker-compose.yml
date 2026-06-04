@@ -30,6 +30,8 @@ services:
       dockerfile: Dockerfile
     image: fintech-webmail
     container_name: fintech-webmail
+    environment:
+      - WEBMAIL_DB_PATH=/opt/webmail/data/hr.sqlite
     expose:
       - "5001"
     ports:
@@ -40,6 +42,7 @@ services:
         ipv4_address: 172.10.10.26
     volumes:
       - ./desktop/email:/opt/webmail/email:ro
+      - ./data:/opt/webmail/data:ro
 
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate

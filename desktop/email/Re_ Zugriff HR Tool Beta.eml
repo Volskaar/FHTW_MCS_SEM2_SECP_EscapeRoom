@@ -1,0 +1,191 @@
+In-Reply-To: <k8sEavHlMP1Ulji3gDIefoItz1rYeNjp3ImXU0OijiNMONqG2oDnf4LCfN4sbFqcDkljt5_bOxG_gKoC2otxfMJQRiUeJoM4bAmBsxGVL4c=@fintech-austria.local>
+References: <sR4VkoqqGffF8JKYs6kDjJIbMMUYf1vhjD5pCQSuf-vSAtgHi9X5UvyJvhAU0MJ4T5la-akIVUwILuoUgfZRBkyZ2qyAtK3uNRPKcsQ_HBI=@fintech-austria.local>
+ <k8sEavHlMP1Ulji3gDIefoItz1rYeNjp3ImXU0OijiNMONqG2oDnf4LCfN4sbFqcDkljt5_bOxG_gKoC2otxfMJQRiUeJoM4bAmBsxGVL4c=@fintech-austria.local>
+X-Pm-Origin: internal
+X-Pm-Content-Encryption: end-to-end
+Subject: Re: Zugriff HR Tool Beta
+To: "Hans Habicht" <hans.habicht@fintech-austria.local>
+From: "Elias Ente" <elias.ente@fintech-austria.local>
+Date: Thu, 4 Jun 2026 11:12:01 +0000
+Mime-Version: 1.0
+Message-Id: y8kVCvWjg0rQv5xFEHFkzwlVpm0piJ9mr6DGJJUM2xjIiZrgAghuLa-S62j0VoRzfXeAjDlTRNf5fLlB_53lz3i_ry0Fva6a-ELJnd0pXgs=@fintech-austria.local
+X-Pm-Spamscore: 0
+Received: from mail.protonmail.ch by mail.protonmail.ch; Wed, 03 Jun 2026 09:54:34 +0000
+X-Original-To: hans.habicht@fintech-austria.local
+Return-Path: elias.ente@fintech-austria.local
+Delivered-To: hans.habicht@fintech-austria.local
+Sender: "Elias Ente" <elias.ente@fintech-austria.local>
+Content-Type: multipart/mixed;
+ boundary="---------------------4c7700ef54fd455f4c322dd5c52f586a"
+
+This is a multi-part message in MIME format.
+
+-----------------------4c7700ef54fd455f4c322dd5c52f586a
+Content-Type: multipart/alternative; boundary="---------------------b1c78680cc10dc962fff4edfeda43db0"
+
+
+-----------------------b1c78680cc10dc962fff4edfeda43db0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Hans=2E
+
+
+Wie peinlich, danke f=C3=BCr den Hinweis, da ist uns anscheinend beim letzt=
+en Commit etwas entgangen =E2=80=A6
+
+
+Mein Kalender ist aktuell echt ziemlich voll dank dem kommenden Product-Rel=
+ease, aber ich werde mir den Source Code umgehend ansehen!
+
+
+LG,
+
+Elias
+
+Hans Habicht <hans=2Ehabicht@fintech-austria=2Elocal> schrieb am Dienstag, =
+2=2E Juni 2026 um 13:11:
+
+Hallo Elias=2E
+
+
+Danke, das schaut sehr n=C3=BCtzlich aus! Ich war so frei, mich ein wenig e=
+inzulesen=2E Ich bin wirklich kein Profi, aber ihr habt ja schon noch einig=
+e ToDo=E2=80=99s offen=2E Vielleicht solltet ihr sie abschlie=C3=9Fen und a=
+us dem Code l=C3=B6schen, bevor ihr in Produktion geht=2E Ansonsten super, =
+wird bestimmt ordentlich Zeit sparen!
+
+
+MFG,
+
+Hans
+
+Elias Ente <elias=2Eente@fintech-austria=2Elocal<mailto:elias=2Eente@fintec=
+h-austria=2Elocal>> schrieb am Freitag, 15=2E Mai 2026 um 09:54:
+
+Servus Hans=2E
+
+
+Danke, dass du dich bereit erkl=C3=A4rt hast, unser neues internes HR Tool =
+zu testen, das sollte dir deine Arbeit um einiges erleichtern=2E
+
+
+Bei Interesse kannst du dich auch gerne einlesen, ich wei=C3=9F ja, dass du=
+ dich gerne mit deinem Werkzeug auseinandersetzt ;)
+
+
+Link ist hier: https://github=2Ecom/eliasentefintech/fintech-hr-powertool
+
+
+R&D freut sich auf dein Feedback aus erster Hand!
+
+
+LG,
+
+Elias
+
+
+
+-----------------------b1c78680cc10dc962fff4edfeda43db0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv style=3D"font-family: Arial, sans-serif; font-size: 14px;"></div><b styl=
+e=3D"font-weight:normal"><p dir=3D"ltr" style=3D"line-height:1=2E38;margin-=
+top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-family: Ari=
+al, sans-serif; font-weight: 400; text-decoration: none; white-space: pre-w=
+rap; color: rgb(0, 0, 0);">Hallo Hans=2E</span></p><br><p dir=3D"ltr" style=
+=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fon=
+t-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; text-decora=
+tion: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Wie peinlich, dank=
+e f=C3=BCr den Hinweis, da ist uns anscheinend beim letzten Commit etwas en=
+tgangen =E2=80=A6</span></p><br><p dir=3D"ltr" style=3D"line-height:1=2E38;=
+margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-fami=
+ly: Arial, sans-serif; font-weight: 400; text-decoration: none; white-space=
+: pre-wrap; color: rgb(0, 0, 0);">Mein Kalender ist aktuell echt ziemlich v=
+oll dank dem kommenden Product-Release, aber ich werde mir den Source Code =
+umgehend ansehen!</span></p><br><p dir=3D"ltr" style=3D"line-height:1=2E38;=
+margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-fami=
+ly: Arial, sans-serif; font-weight: 400; text-decoration: none; white-space=
+: pre-wrap; color: rgb(0, 0, 0);">LG,</span></p><p dir=3D"ltr" style=3D"lin=
+e-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:=
+ 11pt; font-family: Arial, sans-serif; font-weight: 400; text-decoration: n=
+one; white-space: pre-wrap; color: rgb(0, 0, 0);">Elias</span></p></b><div =
+class=3D"protonmail_quote">        Hans Habicht &lt;hans=2Ehabicht@fintech-=
+austria=2Elocal&gt; schrieb am Dienstag, 2=2E Juni 2026 um 13:11:<br>
+<blockquote class=3D"protonmail_quote" type=3D"cite">
+<div style=3D"font-family: Arial, sans-serif; font-size: 14px;"></div><b st=
+yle=3D"font-weight:normal"><p dir=3D"ltr" style=3D"line-height:1=2E38;margi=
+n-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-family: A=
+rial, sans-serif; font-weight: 400; text-decoration: none; white-space: pre=
+-wrap; color: rgb(0, 0, 0);">Hallo Elias=2E</span></p><br><p dir=3D"ltr" st=
+yle=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"=
+font-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; text-dec=
+oration: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Danke, das scha=
+ut sehr n=C3=BCtzlich aus! Ich war so frei, mich ein wenig einzulesen=2E Ic=
+h bin wirklich kein Profi, aber ihr habt ja schon noch einige ToDo=E2=80=99s=
+ offen=2E Vielleicht solltet ihr sie abschlie=C3=9Fen und aus dem Code l=C3=
+=B6schen, bevor ihr in Produktion geht=2E Ansonsten super, wird bestimmt or=
+dentlich Zeit sparen!</span></p><br><p dir=3D"ltr" style=3D"line-height:1=
+=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; fon=
+t-family: Arial, sans-serif; font-weight: 400; text-decoration: none; white=
+-space: pre-wrap; color: rgb(0, 0, 0);">MFG,</span></p><p dir=3D"ltr" style=
+=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fon=
+t-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; text-decora=
+tion: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Hans</span></p></b=
+><div class=3D"protonmail_quote">        Elias Ente &lt;<a href=3D"mailto:e=
+lias=2Eente@fintech-austria=2Elocal" rel=3D"noreferrer nofollow noopener" s=
+tyle=3D"word-break: break-word;">elias=2Eente@fintech-austria=2Elocal</a>&g=
+t; schrieb am Freitag, 15=2E Mai 2026 um 09:54:<br>
+<blockquote class=3D"protonmail_quote" type=3D"cite">
+<div style=3D"font-family: Arial, sans-serif; font-size: 14px;"></div><b st=
+yle=3D"font-weight:normal"><p dir=3D"ltr" style=3D"line-height:1=2E38;margi=
+n-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-family: A=
+rial, sans-serif; font-weight: 400; text-decoration: none; white-space: pre=
+-wrap; color: rgb(0, 0, 0);">Servus Hans=2E</span></p><br><p dir=3D"ltr" st=
+yle=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"=
+font-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; text-dec=
+oration: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Danke, dass du =
+dich bereit erkl=C3=A4rt hast, unser neues internes HR Tool zu testen, das =
+sollte dir deine Arbeit um einiges erleichtern=2E</span></p><br><p dir=3D"l=
+tr" style=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span sty=
+le=3D"font-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; te=
+xt-decoration: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Bei Inter=
+esse kannst du dich auch gerne einlesen, ich wei=C3=9F ja, dass du dich ger=
+ne mit deinem Werkzeug auseinandersetzt ;)</span></p><br><p dir=3D"ltr" sty=
+le=3D"line-height:1=2E38;margin-top:0pt;margin-bottom:0pt"><span style=3D"f=
+ont-size: 11pt; font-family: Arial, sans-serif; font-weight: 400; text-deco=
+ration: none; white-space: pre-wrap; color: rgb(0, 0, 0);">Link ist hier: <=
+/span><a href=3D"https://github=2Ecom/eliasentefintech/fintech-hr-powertool=
+" style=3D"text-decoration: none; word-break: break-word;" target=3D"_blank=
+" rel=3D"noreferrer nofollow noopener"><span style=3D"font-size: 11pt; font=
+-family: Arial, sans-serif; font-weight: 400; text-decoration: underline; t=
+ext-decoration-skip-ink: none; white-space: pre-wrap; color: rgb(17, 85, 20=
+4);">https://github=2Ecom/eliasentefintech/fintech-hr-powertool</span></a><=
+span style=3D"font-size: 11pt; font-family: Arial, sans-serif; font-weight:=
+ 400; text-decoration: none; white-space: pre-wrap; color: rgb(0, 0, 0);">&=
+nbsp;</span></p><br><p dir=3D"ltr" style=3D"line-height:1=2E38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-family: Arial, s=
+ans-serif; font-weight: 400; text-decoration: none; white-space: pre-wrap; =
+color: rgb(0, 0, 0);">R&amp;D freut sich auf dein Feedback aus erster Hand!=
+</span></p><br><p dir=3D"ltr" style=3D"line-height:1=2E38;margin-top:0pt;ma=
+rgin-bottom:0pt"><span style=3D"font-size: 11pt; font-family: Arial, sans-s=
+erif; font-weight: 400; text-decoration: none; white-space: pre-wrap; color=
+: rgb(0, 0, 0);">LG,</span></p><p dir=3D"ltr" style=3D"line-height:1=2E38;m=
+argin-top:0pt;margin-bottom:0pt"><span style=3D"font-size: 11pt; font-famil=
+y: Arial, sans-serif; font-weight: 400; text-decoration: none; white-space:=
+ pre-wrap; color: rgb(0, 0, 0);">Elias</span></p></b><div style=3D"font-fam=
+ily: Arial, sans-serif; font-size: 14px;" class=3D"protonmail_signature_blo=
+ck"><div class=3D"protonmail_signature_block-proton">
+</div>
+</div>
+
+</blockquote><br>
+</div>
+</blockquote><br>
+</div>
+-----------------------b1c78680cc10dc962fff4edfeda43db0--
+
+-----------------------4c7700ef54fd455f4c322dd5c52f586a--
+

@@ -11,6 +11,10 @@
     <div>
         <h1>IntraMail Viewer</h1>
     </div>
+    <div class="userbox">
+        <span>Eingeloggt als {{ session.get('user') }}</span>
+        <a href="/logout">Logout</a>
+    </div>
 </header>
 
 <main class="layout">

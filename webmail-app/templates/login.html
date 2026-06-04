@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>IntraMail Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="auth-wrap">
+    <section class="auth-card">
+        <h1>IntraMail Viewer</h1>
+
+        {% if error %}
+            <div class="auth-error">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" class="auth-form">
+            <label>Username</label>
+            <input type="text" name="username" required autofocus>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
