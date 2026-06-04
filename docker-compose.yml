@@ -3,6 +3,8 @@ services:
     build: .
     expose:
       - "5000"
+    ports:
+      - "8080:5000"
     restart: unless-stopped
     networks:
       backend:
@@ -31,7 +33,9 @@ services:
     image: fintech-webmail
     container_name: fintech-webmail
     environment:
-      - WEBMAIL_DB_PATH=/opt/webmail/data/hr.sqlite
+      - WEBMAIL_SECRET_KEY=webmail-secret-key
+      - WEBMAIL_SESSION_COOKIE_NAME=fintech_webmail_session
+      - WEBMAIL_DB_PATH=/opt/webmail/data/webmail.sqlite
     expose:
       - "5001"
     ports:
@@ -42,7 +46,7 @@ services:
         ipv4_address: 172.10.10.26
     volumes:
       - ./desktop/email:/opt/webmail/email:ro
-      - ./data:/opt/webmail/data:ro
+      - ./webmail-data:/opt/webmail/data
 
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate
