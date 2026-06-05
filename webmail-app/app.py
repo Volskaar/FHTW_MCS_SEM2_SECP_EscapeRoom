@@ -10,7 +10,6 @@ from pathlib import Path
 
 from flask import Flask, abort, redirect, render_template, request, session, url_for
 from db import get_connection
-from seed import initialize_webmail_db
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("WEBMAIL_SECRET_KEY", "webmail-secret-key")
@@ -208,9 +207,6 @@ def utility_processor():
         return url_for("mail_detail", relative_path=relative_path)
 
     return {"mail_link": mail_link}
-
-
-initialize_webmail_db()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=False)

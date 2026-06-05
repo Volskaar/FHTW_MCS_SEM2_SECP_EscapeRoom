@@ -1,6 +1,6 @@
 services:
   powertool:
-    build: .
+    build: ./powertool-app
     expose:
       - "5000"
     ports:
@@ -46,7 +46,6 @@ services:
         ipv4_address: 172.10.10.26
     volumes:
       - ./desktop/email:/opt/webmail/email:ro
-      - ./webmail-data:/opt/webmail/data
 
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate
