@@ -3,7 +3,7 @@ from pathlib import Path
 from db import get_connection
 import shutil
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 BACKUP_DIR = BASE_DIR / "backups"
 BACKUP_FILE = BACKUP_DIR / "BACKUP_2026-06-02.csv"
 
