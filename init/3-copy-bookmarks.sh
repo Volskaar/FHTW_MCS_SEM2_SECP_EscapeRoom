@@ -23,6 +23,6 @@ fi
 
 # Update the Preferences file to add the websites to the startup screen
 if [ -f /config/.config/chromium/Default/Preferences ]; then
-    jq '.session += {"restore_on_startup": 4, "startup_urls": ["http://172.10.10.24:5000/", "https://github.com/eliasentefintech/fintech-hr-powertool"]}'  ~/.config/chromium/Default/Preferences > Preferences.tmp && mv Preferences.tmp ~/.config/chromium/Default/Preferences
+    jq '.session += {"restore_on_startup": 4, "startup_urls": ["http://172.10.10.24:5000/", "http://172.10.10.26:5001/"]}'  ~/.config/chromium/Default/Preferences > Preferences.tmp && mv Preferences.tmp ~/.config/chromium/Default/Preferences
     echo "Added startup websites"
 fi
