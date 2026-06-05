@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import os
 import re
-import sqlite3
 from html import unescape
 from email import policy
 from email.parser import BytesParser
@@ -10,6 +9,8 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 from flask import Flask, abort, redirect, render_template, request, session, url_for
+from db import get_connection
+from seed import initialize_webmail_db
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("WEBMAIL_SECRET_KEY", "webmail-secret-key")
@@ -17,41 +18,6 @@ app.config["SESSION_COOKIE_NAME"] = os.environ.get(
     "WEBMAIL_SESSION_COOKIE_NAME", "fintech_webmail_session"
 )
 MAIL_SOURCE_DIR = Path(os.environ.get("MAIL_SOURCE_DIR", "/opt/webmail/email")).resolve()
-DB_PATH = Path(os.environ.get("WEBMAIL_DB_PATH", "/opt/webmail/data/webmail.sqlite")).resolve()
-
-
-def get_connection():
-    connection = sqlite3.connect(DB_PATH)
-    connection.row_factory = sqlite3.Row
-    return connection
-
-
-def initialize_webmail_db() -> None:
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with get_connection() as conn:
-        conn.execute(
-            """
-            CREATE TABLE IF NOT EXISTS webmail_users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                username TEXT NOT NULL UNIQUE,
-                password TEXT NOT NULL,
-                role TEXT NOT NULL
-            )
-            """
-        )
-
-        has_users = conn.execute("SELECT COUNT(*) AS count FROM webmail_users").fetchone()["count"]
-        if has_users == 0:
-            conn.executemany(
-                """
-                INSERT INTO webmail_users (username, password, role)
-                VALUES (?, ?, ?)
-                """,
-                [
-                    ("hans.habicht", "Remington", "user"),
-                    ("admin", "Remington", "admin"),
-                ],
-            )
 
 def _safe_relative_path(relative_path: str) -> Path:
     candidate = (MAIL_SOURCE_DIR / relative_path).resolve()
