@@ -65,6 +65,7 @@ services:
       - LC_ALL=de_DE.UTF-8
       - DOCKER_MODS=linuxserver/mods:universal-package-install
       - INSTALL_PACKAGES=iproute2|jq|libfuse2|iputils-ping|vim|nmap
+      - SELKIES_UI_SHOW_SIDEBAR="false|locked"
     ports:
       - "3000:3000"
       - "3001:3001" ## https mit selfsigned Cert
