@@ -1,8 +1,10 @@
 services:
   powertool:
-    build: .
+    build: ./powertool-app
     expose:
       - "5000"
+    ports:
+      - "8080:5000"
     restart: unless-stopped
     networks:
       backend:
@@ -15,6 +17,8 @@ services:
     networks:
       backend:
         ipv4_address: 172.10.10.25
+    volumes:
+      - ./BACKUP_2026_06_02.csv:/root/BACKUPS/BACKUP_2026_06_02.csv
     command: >
       sh -c "apk add --no-cache openssh 
       && ssh-keygen -A 
@@ -22,10 +26,35 @@ services:
       && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config 
       && /usr/sbin/sshd -D -e"
 
+  webmail:
+    build:
+      context: ./webmail-app
+      dockerfile: Dockerfile
+    image: fintech-webmail
+    container_name: fintech-webmail
+    environment:
+      - WEBMAIL_SECRET_KEY=webmail-secret-key
+      - WEBMAIL_SESSION_COOKIE_NAME=fintech_webmail_session
+      - WEBMAIL_DB_PATH=/opt/webmail/data/webmail.sqlite
+    expose:
+      - "5001"
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+    networks:
+      backend:
+        ipv4_address: 172.10.10.26
+    volumes:
+      - ./desktop/email:/opt/webmail/email:ro
+
   webtop:
     image: lscr.io/linuxserver/webtop:ubuntu-mate
     networks:
       - backend
+#    cap_add:
+#      - SYS_ADMIN  # Allows bubblewrap to create namespaces (for mail)
+#    security_opt:
+#      - seccomp:unconfined # Disables the syscall filter that blocks sandboxing (for mail)
     environment:
       - PUID=1000
       - PGID=1000
@@ -35,10 +64,19 @@ services:
       - PASSWORD=Remington
       - LC_ALL=de_DE.UTF-8
       - DOCKER_MODS=linuxserver/mods:universal-package-install
-      - INSTALL_PACKAGES=libfuse2|iputils-ping|vim|nmap
+      - INSTALL_PACKAGES=iproute2|jq|libfuse2|iputils-ping|vim|nmap
+      - SELKIES_UI_SHOW_SIDEBAR="false|locked"
     ports:
       - "3000:3000"
+      - "3001:3001" ## https mit selfsigned Cert
     shm_size: "1gb"
+    volumes:
+      - ./config:/config #on initialization directory gets filled
+      - ./desktop:/webtop_configurations:ro
+      - ./init/1-copy-files.sh:/custom-cont-init.d/1-copy-files.sh:ro
+      - ./init/2-set-autostart.sh:/custom-cont-init.d/2-set-autostart.sh:ro
+      - ./init/3-copy-bookmarks.sh:/custom-cont-init.d/3-copy-bookmarks.sh:ro
+      - ./init/4-setup-shortcuts.sh:/custom-cont-init.d/4-setup-shortcuts.sh:ro
 
 networks:
   backend:

@@ -1,0 +1,91 @@
+{
+   "checksum": "00649512a0305ba8da504649b44aee4c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13423243714464837",
+            "date_last_used": "13423243739525326",
+            "guid": "58682ad1-f241-4d4b-9be5-b9d7e642d332",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "FinTech HR Powertool",
+            "type": "url",
+            "url": "http://172.10.10.24:5000/"
+         }, {
+            "date_added": "13423243733818352",
+            "date_last_used": "0",
+            "guid": "8d12bdac-ab22-4380-b19d-5f84ac11ad28",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Base64 Decode and Encode - Online",
+            "type": "url",
+            "url": "https://www.base64decode.org/"
+         }, {
+            "date_added": "13424201002945071",
+            "date_last_used": "0",
+            "guid": "b27b90f2-0b5a-47ed-96e9-22266be96a61",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "GitHub - eliasentefintech/fintech-hr-powertool: Internal HR platform prototype for FinTech Austria GmbH. Used for testing and development. · GitHub",
+            "type": "url",
+            "url": "https://github.com/eliasentefintech/fintech-hr-powertool"
+         }, {
+            "date_added": "13425173745382915",
+            "date_last_used": "0",
+            "guid": "11471952-2e2b-426c-8e5c-c8c7f2d13226",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "IntraMail Login",
+            "type": "url",
+            "url": "http://172.10.10.26:5001/"
+         } ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "13425173873951924",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13425173873951924",
+            "date_last_used": "0",
+            "guid": "73b3b604-f245-43b8-bae9-cdffd2b5dcb5",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "SQLite Viewer Web App",
+            "type": "url",
+            "url": "https://sqliteviewer.app/"
+         } ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "13425173877210799",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13423243677773441",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

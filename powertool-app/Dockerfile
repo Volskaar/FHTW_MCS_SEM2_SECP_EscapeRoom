@@ -5,7 +5,7 @@ WORKDIR /opt/fintech
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app ./app
+COPY . ./app
 COPY data ./data
 COPY backups ./backups
 

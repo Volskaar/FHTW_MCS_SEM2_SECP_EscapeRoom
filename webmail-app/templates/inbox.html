@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>IntraMail Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <h1>IntraMail Viewer</h1>
+    </div>
+    <div class="userbox">
+        <span>Eingeloggt als {{ session.get('user') }}</span>
+        <a href="/logout">Logout</a>
+    </div>
+</header>
+
+<main class="layout">
+    <aside class="mail-list">
+        <div class="list-title">Nachrichten ({{ mails|length }})</div>
+        {% if mails %}
+            {% for mail in mails %}
+                <a class="mail-item {% if selected_path == mail.relative_path %}active{% endif %}" href="{{ mail_link(mail.relative_path) }}">
+                    <div class="mail-row">
+                        <strong>{{ mail.subject }}</strong>
+                        <span>{{ mail.date }}</span>
+                    </div>
+                    <div class="mail-row muted">
+                        <span>{{ mail.from }}</span>
+                    </div>
+                    <p>{{ mail.preview }}</p>
+                </a>
+            {% endfor %}
+        {% else %}
+            <div class="empty">Es sind aktuell keine E-Mails vorhanden.</div>
+        {% endif %}
+    </aside>
+
+    <section class="mail-detail">
+        {% if selected_mail %}
+            <div class="meta-grid">
+                <div><span>Betreff:</span> {{ selected_mail.subject }}</div>
+                <div><span>Datum:</span> {{ selected_mail.date }}</div>
+                <div><span>Von:</span> {{ selected_mail.from }}</div>
+                <div><span>An:</span> {{ selected_mail.to }}</div>
+                <div><span>Datei:</span> {{ selected_mail.filename }}</div>
+            </div>
+            <article class="mail-body">{{ selected_mail.body }}</article>
+        {% else %}
+            <div class="empty">Es sind aktuell keine E-Mails vorhanden.</div>
+        {% endif %}
+    </section>
+</main>
+</body>
+</html>
